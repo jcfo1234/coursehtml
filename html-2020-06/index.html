@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML desde cero - clase 6: Tablas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        td,
+        th {
+            border: 1px solid #000;
+            padding: .5em;
+        }
+        
+        th {
+            background: #333;
+            color: white;
+        }
+        
+        .col-1 {
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        <table></table>: Para marcar la tabla
+        <tr></tr>: Para marcar una fila en una tabla
+        <td></td>: Para cada celda
+        <th></th>: Celdas de cabecera
+        <thead></thead>: Encabezado de una tabla
+        <tfoot></tfoot>: Pie de pagina de una tabla (conclusiones)
+        <caption></caption>: Titulo de una tabla
+
+        Atributos para agrupacion de filas y columnas
+        colspan=N
+        rowspan=N
+     -->
+    <table>
+        <caption>Horario semanal de clases en EDteam</caption>
+        <colgroup>
+            <col class="col-1">
+            <col class="col-2">
+            <col class="col-3">
+            <col class="col-4">
+            <col style="background: yellow">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>Total de cursos</td>
+                <td colspan=4>6 cursos</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td colspan=2>HTML</td>
+                <td rowspan=2>Algorithms</td>
+                <td>Photoshop</td>
+                <td>Marketing digital</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>CSS</td>
+                <td>Java</td>
+                <td>UX Design</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

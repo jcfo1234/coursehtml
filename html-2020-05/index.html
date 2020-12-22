@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML desde cero - Clase 5</title>
+    <style>
+        picture {
+            width: 300px;
+        }
+        
+        picture * {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Formatos de imagenes
+        Vectores: 
+            *.svg
+
+        Mapa de bits: 
+            *.jpg *.jpeg (para fotos)
+            *.png (para fotos o imagenes detalladas con transparencias. Mas grande que JPG, demora mas en cargar)
+            *.gif (para animaciones)
+            *.webp (creado por google, mas liviano que jpg y png, soporta transparencias)
+
+    -->
+    <h2>Logo Design</h2>
+    <img src="/img/logodesign.svg" alt="Hombre al lado de un logo" width="300">
+
+    <h2>Motocicleta</h2>
+    <img src="/img/motorcycle.jpg" alt="Motocicleta en calle" width="300">
+
+    <h2>Goku</h2>
+    <img src="https://th.bing.com/th/id/OIP.fJ5uG-qT4y2ujcUszJDRWQHaQZ?w=115&h=187&c=7&o=5&pid=1.7" alt="Goku sonriendo" width="300">
+
+    <!-- devicePixelRatio
+
+        Pixeles de viewport (PV)
+            Pixeles disponibles para mostrar contenido
+
+        Pixeles reales (PR)
+            Pixeles fisicos implementados por el fabricante en la pantalla
+
+        devicePixelRatio = PR / PV
+    -->
+
+    <!-- 
+    <h2>SRCSET</h2>
+    <img srcset="/img/pantalla.jpg 2x, /img/motorcycle.jpg 4x" src="/img/logodesign.svg" alt="">
+    -->
+
+    <div>
+        <h2>Multi-Imagen</h2>
+        <picture>
+            <source srcset="/img/pantalla.jpg" media="(min-width:800px)">
+            <source srcset="/img/motorcycle.jpg" media="(min-width:600px)">
+            <source srcset="https://www.gstatic.com/webp/gallery/4.sm.webp" type="image/webp" media="(min-width:550px)">
+            <img src="/img/logodesign.svg" alt="Hombre al lado de un logo">
+        </picture>
+    </div>
+
+    <!-- Contenido cortando contenido principal -->
+    <h2>Etiqueta Figure</h2>
+    <figure>
+        <img src="/img/motorcycle.jpg" width=300 alt="foto de una moto">
+        <figcaption>Foto de moto en una calle</figcaption>
+    </figure>
+
+    <!-- Audio y video
+        Para video formato mp4 y codec h264 
+    -->
+    <h2>Video</h2>
+    <video src="/video/edtaller.mp4" width="500" controls poster="/img/motorcycle.jpg" autoplay muted></video>
+
+    <h2>Audio</h2>
+    <audio src="/audio/musica.mp3" controls muted></audio>
+
+    <!-- Insertar contenido externo 
+        iframe: Traido de una pagina web
+        iframe casi nunca se usa porque se copia de la fuente donde se saco el contenido externo
+    -->
+    <h2>Contenido externo</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PNTTmDo4xuw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h2>Formulario externo</h2>
+    <iframe height="443" title="Embedded Wufoo Form" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="https://mario1234gonzo.wufoo.com/embed/z2qt8yv1191cs8/"> <a href="https://mario1234gonzo.wufoo.com/forms/z2qt8yv1191cs8/">Fill out my Wufoo form!</a> </iframe>
+</body>
+
+</html>

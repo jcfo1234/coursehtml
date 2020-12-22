@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf8">
+    <title>Curso HTML desde cero - Clase 3</title>
+    <style>
+        div {
+            color: red;
+        }
+        
+        span {
+            color: green;
+        }
+        
+        code {
+            background: pink
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cada etiqueta dentro de body se llama elemento -->
+    <!-- Elementos de bloque reservan todo el espacio
+        h1, h2, h3, h4, h5, h6
+        p
+        hr (horizontal rule), separacion de tema
+        pre (preformat): Respeta el formato del contenido
+        blockquote (bloque de cita)
+        div (division): Caja vacia para organizar contenido y luego aplicar
+        estilos por CSS y aplicar contenidos por Javascript
+    -->
+    <h1>Hola mundo</h1>
+    <h2>Hola EDTeam</h2>
+    <p>Bienvenidos a mi nueva pagina web</p>
+    <hr>
+    <div>
+        <h2>Noticias de la semana</h2>
+        <pre>
+            Me gustas cuando callas
+            porque estas como ausente
+            parece que los ojos se te hubieran volado
+        </pre>
+        <code>
+            <pre>
+                h1 {
+                    color: red;
+                }
+            </pre>
+        </code>
+        <p>El libro Cien anos de soledad de Gabriel Garcia Marquez comienza asi:</p>
+        <blockquote>
+            Muchos anos despues, <br> frente al peloton de fusilamiento <br> el coronel Aureliano Buendia habria de recordar <br> aquella tarde remota en que su padre lo llamo a conocer el hielo
+        </blockquote>
+    </div>
+
+    <!-- Elementos de linea deben estar dentro de un elemento de bloque
+        em (emphasis)
+        strong (texto mas importante)
+        small (texto menos importante)
+        wbr (word breaking rule)
+        br (breaking rule): Saltos de linea
+        span (contenedor de linea)
+        
+        Dan estilos sobre el texto
+        b (bold)
+        u (underline)
+        i (italic)
+        cite (cita en linea)
+        sub (subindex)
+        sup (superindex)
+        code
+        time
+    -->
+    <p>El libro <strong>Cien anos de soledad</strong> es un <span>clasico literario</span></p>
+    <span>
+        <p>Supuestapalabrasuperhiperachirequete<wbr>largaquevamosacortarconlaetiquetawordbreakingrule</p>
+    </span>
+    <p>HTML todavia conserva etiquetas antibuas para <b>negrita</b> <u>subrallado</u> y <i>cursiva</i></p>
+    <p>H<sub>2</sub>O es el simbolo del agua segun la quimica <sup>1</sup>
+    </p>
+    <p>Las variables en Javascript se declaran con <code>let</code></p>
+    <p>La reunion es a las <time datetime="2018-07-07T20:00:00">17:00</time> </p>
+</body>
+
+</html>

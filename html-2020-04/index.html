@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 - Enlaces y listas</title>
+</head>
+
+<body>
+    <!-- Arquitectura cliente servidor
+        Arquitectura: Forma en que estan estructurados los componentes de un sistema.
+        Cliente: Dispositivo que solicita la pagina web
+        Servidor: Hardware y Software que almacenan y entregan la pagina web y sus componentes
+    -->
+    <h1>Hola EDTeam</h1>
+    <!-- Enlaces se crean con la etiqueta a (anchor) y necesitan el atributo obligatorio href -->
+    <a href="https://ed.team">Ir a EDteam</a><br>
+
+    <!-- Attributos opcionales 
+        target="_blank": pestana nueva
+        rel="nofollow": no transmite SEO
+        rel="noreference": no indica al destino el origen del link
+        rel="noopener": evita la incrustacion de codigo malicioso al abrir enlaces en nuevas pestanas
+        download: Descarga el recurso en lugar de abrirlo en el navegador
+    -->
+    <a href="https://ed.team" target="_blank" rel="nofollow">Ir a EDteam en pestana nueva</a><br>
+
+    <!-- Rutas relativas y absolutas 
+        1. Rutas Absolutas: Tienen protocolo (http o https) y son unicas, usadas para rutas externas
+        2. Rutas Relativas: Se usan para rutas internas del proyecto, no usan protocolo y 
+        se debe navegar hacia el destino de la siguiente manera:
+            Si el recurso esta en la misma carpeta se escribe su nombre y extension
+            Si el recurso esta una carpeta por encima (../)
+            Si el recurso esta en una carpeta por debajo (carpeta/archivo.png)
+        3. Rutas relativas a la raiz
+        Se construyen a partir de la carpeta raiz del proyecto. Empiezan con "/"
+    -->
+    <p>
+        <a href="/img/personajes/goku.jpg">Imagen de Goku</a><br>
+        <a href="/img/personajes/goku.jpg" download>Descargar imagen Goku</a>
+    </p>
+    <p><a href="/html/imagenes.html">Ir a imagenes</a></p>
+
+    <p>
+        <a href="/html/marcadores.html">Ir a marcadores</a><br>
+    </p>
+    <p><a href="/html/listas.html">Ir a las listas</a></p>
+
+</body>
+
+</html>
